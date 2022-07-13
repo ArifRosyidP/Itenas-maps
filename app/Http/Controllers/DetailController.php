@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\detailssid;
+use App\Models\Gedung;
 use Illuminate\Http\Request;
 
 class DetailController extends Controller
@@ -11,10 +12,7 @@ class DetailController extends Controller
     {
         return view('part/jtable', [
             "title" => "Detail Jaringan",
-            "ssids" => detailssid::all(),
-            // "gedung" => detailssid::all()->Gedung,
-            //"lantai" => detailssid::all()->Lantai,
-            //"status" => detailssid::all()->Status,
+            "ssids" => detailssid::all()
         ]);
     }
 }

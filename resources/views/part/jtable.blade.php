@@ -59,44 +59,17 @@
                     <!-- <th scope="col">Speed Upload</th> -->
                 </tr>
             </thead>
-            <tbody>
-                @php
-                $num = 1;
-                @endphp
-                
+            <tbody>                
                 @foreach ($ssids as $ssid)
                 <tr>
-                    <th scope="row">1</th>
-                    {{-- <td>{{ $gedung->name }}</td>
-                    <td>{{ $lantai->keterangan }}</td>
+                    <th scope="row">{{ $ssid->id }}</th>
+                    <td>{{ $ssid->Gedung->name }}</td>
+                    <td>{{ $ssid->Lantai->keterangan }}</td>
                     <td>{{ $ssid->nama_ssid }}</td>
-                    <td>{{ $status->nama_status }}</td> --}}
+                    <td>{{ $ssid->Status->nama_status }}</td>
                 </tr>
 
                 @endforeach
-
-                {{-- while ($truangan = mysqli_fetch_array($result)) {
-                    echo "<tr>";
-                    echo "<td>" . $num++ . "</td>";
-                    echo "<td>" . $truangan['nama_gedung'] . "</td>";
-                    // echo "<td>" . $truangan['id_lantai'] . "</td>";
-                    echo "<td>" . $truangan['keterangan'] . "</td>";
-                    // echo "<td>" . $truangan['id_ssid'] . "</td>";
-                    echo "<td>" . $truangan['nama_ssid'] . "</td>";
-                    echo "<td>" . $truangan['nama_status'] . "</td>";
-                    // if (is_null($truangan['s_download'])) {
-                    //     echo "<td>" . $truangan['s_download'] . " - </td>";
-                    // } else {
-                    //     echo "<td>" . $truangan['s_download'] . " Mbps </td>";
-                    //     // echo $data['s_download'];
-                    // }
-                    // if (is_null($truangan['s_upload'])) {
-                    //     echo "<td>" . $truangan['s_upload'] . " - </td>";
-                    // } else {
-                    //     echo "<td>" . $truangan['s_upload'] . " Mbps </td>";
-                    // }
-                }
-                ?> --}}
             </tbody>
         </table>
     </div>
