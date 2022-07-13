@@ -41,6 +41,13 @@
 
             @if (($info) === "Jaringan")
                 <img src={{ asset("img/map-itenas-ed3-ja.jpg") }} class="mx-auto d-block imageMaps" alt="Koneksi / Server /  bermasalah cuk">  
+                <div class="container details">
+                    <div class="detail-table">
+                        <a href="/jtable" class="text-decoration-none">
+                            <button type="button" class="btn btn-dark ">Detail</button>
+                        </a>
+                    </div>
+                </div>          
                 @include('part.Jaringan.gd1')
                 @include('part.Jaringan.gd2')
                 @include('part.Jaringan.gd3')

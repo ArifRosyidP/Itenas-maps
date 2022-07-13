@@ -21,8 +21,11 @@ Route::get('/', [JaringanController::class, 'index']);
 
 Route::get('/aset', [AsetController::class, 'index']);
 
+Route::get('/jtable', [AsetController::class, 'index']);
+
 Route::get('/about', function () {
     return view('welcome',[
         "title" => "About"
     ]);
 });
+
