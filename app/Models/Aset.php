@@ -10,7 +10,7 @@ class Aset extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id','nama'];
+    protected $guarded = ['id'];
     
     public function gedung()
     {
