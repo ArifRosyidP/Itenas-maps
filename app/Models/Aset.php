@@ -10,10 +10,11 @@ class Aset extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $guarded = ['id','nama'];
     
     public function gedung()
     {
+        
         return $this->belongsTo(Gedung::class);
     }
 }
