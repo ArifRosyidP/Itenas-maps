@@ -9,6 +9,16 @@ body {
   /* max-width: 100%; */
 }
 
+.container.details {
+  position: absolute;
+  top: 35%;
+  z-index: 1;
+  /* height: auto; */
+  width: 40vw;
+  /* background-color: red; */
+  left: 5%;
+}
+
 .title-map {
   position: absolute;
   top: 20%;
@@ -277,6 +287,12 @@ a {
     /* margin: 0px; */
     padding-top: 90px;
     /* height: 100%; */
+  }
+
+  .container.details {
+    margin-top: 3px;
+    top: 22%;
+    right: -2.3%;
   }
 
   /* arrow size */

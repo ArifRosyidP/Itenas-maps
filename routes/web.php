@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AsetController;
+use App\Http\Controllers\DetailController;
 use App\Http\Controllers\JaringanController;
 
 /*
@@ -21,7 +22,7 @@ Route::get('/', [JaringanController::class, 'index']);
 
 Route::get('/aset', [AsetController::class, 'index']);
 
-Route::get('/jtable', [AsetController::class, 'index']);
+Route::get('/jtable', [DetailController::class, 'index']);
 
 Route::get('/about', function () {
     return view('welcome',[

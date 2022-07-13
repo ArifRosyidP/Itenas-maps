@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Tabel Jaringan</title>
-
+    <title>{{ $title }}</title>
 
     <!-- Icon -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
@@ -14,32 +13,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 
     <!-- Custom -->
-    <!-- <link rel="stylesheet" type="text/css" href="assets/style/tstyle.css"> -->
-    <script src="assets/scripts/script.js"></script>
+    <link rel="stylesheet" href={{ asset("css/style.css") }}>
+    <link rel="stylesheet" href={{ asset("css/style2.css") }}>
+    <link rel="stylesheet" href="css/stylenavbar.css">
+    <script src={{ asset("js/script.js") }}></script>
 </head>
 
 <body>
-    <?php
-    include("controller/connection.php");
-
-    // SELECT g.nama_gedung, d.id_lantai, l.keterangan, id_ssid, nama_ssid, status, s_download, s_upload FROM detailssid d JOIN gedung g ON g.id_gedung = d.id_gedung JOIN lantai l ON l.id_lantai = d.id_lantai;
-
-    // ubah table detailssd aja jika ingin menambahkan sesuatu
-
-    // $result = mysqli_query($conn, "SELECT g.nama_gedung, d.id_lantai, l.keterangan, id_ssid, nama_ssid, status, s_download, s_upload FROM detailssid d LEFT JOIN gedung g ON g.id_gedung = d.id_gedung LEFT JOIN lantai l ON l.id_lantai = d.id_lantai");
-
-    // $result = mysqli_query($conn, "SELECT g.nama_gedung, d.id_lantai, l.keterangan, id_ssid, nama_ssid, status, s_download, s_upload FROM detailssid d JOIN gedung g ON g.id_gedung = d.id_gedung JOIN lantai l ON l.id_lantai = d.id_lantai");
-
-    // $result = mysqli_query($conn, "SELECT g.nama_gedung, d.id_lantai, l.keterangan, id_ssid, nama_ssid, s.nama_status, s_download, s_upload FROM detailssid d LEFT JOIN gedung g ON g.id_gedung = d.id_gedung LEFT JOIN lantai l ON l.id_lantai = d.id_lantai LEFT JOIN status s ON s.id_status = d.id_status");
-
-    $result = mysqli_query($conn, "SELECT g.nama_gedung, d.id_lantai, l.keterangan, id_ssid, nama_ssid, s.nama_status FROM detailssid d LEFT JOIN gedung g ON g.id_gedung = d.id_gedung LEFT JOIN lantai l ON l.id_lantai = d.id_lantai LEFT JOIN status s ON s.id_status = d.id_status");
-
-    ?>
-
     <header>
 
     </header>
@@ -47,14 +33,14 @@
     <!-- <div class="container details"> -->
     <div class="container details position-absolute">
         <div class="detail-table">
-            <a href="." class="text-decoration-none">
+            <a href="/" class="text-decoration-none">
                 <button type="button" class="btn btn-success ">Kembali</button>
             </a>
         </div>
     </div>
 
     <div class="titlet text-center my-3">
-        <h1>Detail Jaringan</h1>
+        <h1>{{ $title }}</h1>
     </div>
 
     <!-- The Table -->
@@ -74,9 +60,22 @@
                 </tr>
             </thead>
             <tbody>
-                <?php
+                @php
                 $num = 1;
-                while ($truangan = mysqli_fetch_array($result)) {
+                @endphp
+                
+                @foreach ($ssids as $ssid)
+                <tr>
+                    <th scope="row">1</th>
+                    {{-- <td>{{ $gedung->name }}</td>
+                    <td>{{ $lantai->keterangan }}</td>
+                    <td>{{ $ssid->nama_ssid }}</td>
+                    <td>{{ $status->nama_status }}</td> --}}
+                </tr>
+
+                @endforeach
+
+                {{-- while ($truangan = mysqli_fetch_array($result)) {
                     echo "<tr>";
                     echo "<td>" . $num++ . "</td>";
                     echo "<td>" . $truangan['nama_gedung'] . "</td>";
@@ -97,7 +96,7 @@
                     //     echo "<td>" . $truangan['s_upload'] . " Mbps </td>";
                     // }
                 }
-                ?>
+                ?> --}}
             </tbody>
         </table>
     </div>

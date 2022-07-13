@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('detailssids', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('gedung_id')->unique();
+            $table->foreignId('lantai_id')->unique();
+            $table->foreignId('status_id')->unique();
+            $table->string('nama_ssid');
             $table->timestamps();
         });
     }
