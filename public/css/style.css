@@ -11,7 +11,7 @@ body {
 
 .container.details {
   position: absolute;
-  top: 35%;
+  top: 23%;
   z-index: 1;
   /* height: auto; */
   width: 40vw;
@@ -27,7 +27,7 @@ body {
 
 .detail-table a button {
   background-color: orange;
-  color: red;
+  color: rgb(255, 255, 255);
   font-size: 1.5rem;
   border-style: none;
 }
@@ -188,7 +188,7 @@ border-color: #000000
 
 .info-item:not(.titlegd) {
   /* font size also didnt work wtf */
-  font-size: 100em;
+  /* font-size: 100em; */
   /* font-size: 1.2em; */
   /* font-weight: 300; */
 }

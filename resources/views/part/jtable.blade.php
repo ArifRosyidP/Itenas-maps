@@ -63,10 +63,10 @@
                 @foreach ($ssids as $ssid)
                 <tr>
                     <th scope="row">{{ $ssid->id }}</th>
-                    <td>{{ $ssid->Gedung->name }}</td>
-                    <td>{{ $ssid->Lantai->keterangan }}</td>
-                    <td>{{ $ssid->nama_ssid }}</td>
-                    <td>{{ $ssid->Status->nama_status }}</td>
+                    <td>{{ ($ssid->Gedung->name === "") ? "-" : ($ssid->Gedung->name) }}</td>
+                    <td>{{ ($ssid->Lantai->keterangan === "") ? "-" : ($ssid->Lantai->keterangan) }}</td>
+                    <td>{{ ($ssid->nama_ssid === "") ? "-" : ($ssid->nama_ssid) }}</td>
+                    <td>{{ ($ssid->Status->nama_status === "") ? "-" : ($ssid->Status->nama_status) }}</td>
                 </tr>
 
                 @endforeach
