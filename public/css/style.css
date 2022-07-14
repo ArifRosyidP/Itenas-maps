@@ -19,12 +19,17 @@ body {
   left: 5%;
 }
 
-.title-map {
-  position: absolute;
-  top: 20%;
-  right: 74%;
-  z-index: 2;
-  font-size: 3.5rem;
+.detail-table {
+  /* background-color: red; */
+  display: inline-block;
+  /* display: inline-block; */
+}
+
+.detail-table a button {
+  background-color: orange;
+  color: red;
+  font-size: 1.5rem;
+  border-style: none;
 }
 
 /* The Maps */
@@ -94,17 +99,17 @@ body {
 }
 
 .logowsidebaro {
-    padding-right: 20px;
-    color: orange;
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    font-size: 1.8vw;
+  padding-right: 20px;
+  color: orange;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  font-size: 1.8vw;
 }
 
 .logowsidebarw {
-    padding-right: 20px;
-    color: white;
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    font-size: 1.8vw;
+  padding-right: 20px;
+  color: white;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  font-size: 1.8vw;
 }
 
 .logoed {
@@ -122,38 +127,33 @@ body {
   font-size: 0.1em;
 }
 
-.jaringantext {
-    color: black;
-    font-weight: 500;
-    font-size: 1rem;
-}
-
 .asettext {
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    font-size: 1rem;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .btnaset {
-    /* color: black;
-    font-weight: 500;
-    font-size: 1rem; */
-    padding-bottom: 20px;
+  /* color: black;
+  font-weight: 500;
+  font-size: 1rem; */
+  padding-bottom: 20px;
 }
 
 .btn-go {
-  font-weight: 500;
-  font-size: 1rem;
-  color: #212529;
-  background-color: rgb(255, 255, 255);
-  border-color: #000000
+font-weight: 500;
+font-size: 1rem;
+color: #212529;
+background-color: rgb(255, 255, 255);
+border-color: #000000
 }
 
 .btn-go:hover {
-  color: #212529;
-  background-color: #ff9900;
-  border-color: #000000
+color: #212529;
+background-color: #ff9900;
+border-color: #000000
 }
+
 
 .editjalo {
   color: black;
@@ -164,9 +164,9 @@ body {
   background-color: white;
   box-shadow: -5px -5px 15px rgba(48, 54, 61, 0.2);
   /* top: -200%; */
-  /* padding: 5% 40%; */
+  padding: 5% 40%;
   border-radius: 16px;
-  /* margin-top: -280%; */
+  margin-top: -280%;
   /* right: calc(-380%); */
   /* left: calc(-360%); */
   right: -8.4vw;
@@ -179,7 +179,7 @@ body {
   /* max-width: 100%; */
   width: 18.3vw;
   /* width: 22em; */
-  /* height: auto; */
+  height: auto;
   /* popup */
   opacity: 0;
   pointer-events: none;
@@ -188,8 +188,8 @@ body {
 
 .info-item:not(.titlegd) {
   /* font size also didnt work wtf */
-  /* font-size: 100em; */
-  font-size: 1.2em;
+  font-size: 100em;
+  /* font-size: 1.2em; */
   /* font-weight: 300; */
 }
 
@@ -249,11 +249,13 @@ a {
 }
 
 .info:hover {
-  z-index: 2;
+  z-index: 1;
   animation-name: slideUp;
-  animation-duration: 0.55s;
-  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  /* animation: slideUp 2s linear infinite; */
   /* display: block; */
+  transition: 0.5s ease-in-out;
 }
 
 .clearfix {
@@ -281,8 +283,9 @@ a {
   body {
     background-color: #f6f5f0 !important;
     background-repeat: no-repeat;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    overflow: hidden;
     /* RKGK, if still want vertical popup*/
     /* margin: 0px; */
     padding-top: 90px;
@@ -293,6 +296,12 @@ a {
     margin-top: 3px;
     top: 22%;
     right: -2.3%;
+  }
+
+  .detail-table a button {
+    /* background-color: red; */
+    padding: 8% 20%;
+    font-size: 0.45rem;
   }
 
   /* arrow size */
@@ -348,20 +357,13 @@ a {
     margin-top: 0vh !important;
     margin-bottom: -0.2vh !important;
     /* apparently you must do this to overwriting bs5. */
-    font-size: 0.8rem !important;
+    font-size: 0.75rem !important;
   }
+
   p.jaringantext {
-    font-size: 0.5em !important;
+    font-size: 0.48em !important;
     padding: 0% 0%;
     margin: 0% 0%;
-  }
-  .title-map {
-    width: 100%;
-    height: auto;
-    display: block;
-    top: 20% !important;
-    right: -5% !important;
-    font-size: 1.5rem !important;
   }
 
   .btnaset {
@@ -385,5 +387,4 @@ a {
     background-color: #ff9900;
     border-color: #000000
   }
-  /* Make reverse for  gd25, gd22, gd1(giri giri), gd19b, gd17, gd4, gd14, gd14a, gd18, gd20 */
 }
