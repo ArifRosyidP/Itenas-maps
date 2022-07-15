@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('lantais', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('gedung_id')->unique();
+            $table->foreignId('gedung_id');
             $table->string('keterangan');
             $table->timestamps();
         });

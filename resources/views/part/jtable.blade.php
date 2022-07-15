@@ -59,10 +59,13 @@
                     <!-- <th scope="col">Speed Upload</th> -->
                 </tr>
             </thead>
-            <tbody>                
+            <tbody>
+                @php
+                    $num = 1;
+                @endphp                
                 @foreach ($ssids as $ssid)
                 <tr>
-                    <th scope="row">{{ $ssid->id }}</th>
+                    <th scope="row">{{ $num++ }}</th>
                     <td>{{ ($ssid->Gedung->name === "") ? "-" : ($ssid->Gedung->name) }}</td>
                     <td>{{ ($ssid->Lantai->keterangan === "") ? "-" : ($ssid->Lantai->keterangan) }}</td>
                     <td>{{ ($ssid->nama_ssid === "") ? "-" : ($ssid->nama_ssid) }}</td>
