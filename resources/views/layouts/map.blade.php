@@ -36,7 +36,6 @@
 <body>
     <header>
         @include('part.sidebar')
-        @include('part.navbar')
     </header>
     <div class="all-comp">
         <!-- Legenda -->

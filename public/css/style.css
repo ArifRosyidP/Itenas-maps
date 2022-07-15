@@ -9,27 +9,45 @@ body {
     /* max-width: 100%; */
 }
 
-.container.details {
+.container.kembali {
     position: absolute;
-    top: 23%;
+    height: auto;
+    top: 1%;
     z-index: 1;
     /* height: auto; */
     width: 40vw;
     /* background-color: red; */
-    left: 5%;
+    /* left: 5%; */
+    right: 50%;
+}
+
+.container.details {
+    position: absolute;
+    height: auto;
+    top: 15%;
+    z-index: 1;
+    /* height: auto; */
+    /* width: 40vw; */
+    /* background-color: red; */
+    /* left: 5%; */
+    right: 15%;
+    width: 100%;
 }
 
 .detail-table {
-    /* background-color: red; */
+    /* position: absolute; */
+    /* background-color: red !important; */
+    /* display: block; */
     display: inline-block;
-    /* display: inline-block; */
 }
 
 .detail-table a button {
+    /* width: 100%; */
+    /* position: relative; */
     background-color: orange;
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
     font-size: 1.5rem;
-    border-style: none;
+    /* border-style: none; */
 }
 
 /* The Maps */
@@ -298,7 +316,7 @@ a {
     }
 
     .detail-table a button {
-        /* background-color: red; */
+        /* background-color: red !important; */
         padding: 8% 20%;
         font-size: 0.45rem;
     }
