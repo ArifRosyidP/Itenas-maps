@@ -13,22 +13,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+    </script>
 
     <!-- Custom -->
-    <link rel="stylesheet" href={{ asset("css/style.css") }}>
-    <link rel="stylesheet" href={{ asset("css/style2.css") }}>
-    <link rel="stylesheet" href="css/stylenavbar.css">
-    <script src={{ asset("js/script.js") }}></script>
+    <link rel="stylesheet" href={{ asset('css/style.css') }}>
+    <link rel="stylesheet" href={{ asset('css/stylenavbar.css') }}>
+    <link rel="stylesheet" href="css/stylesidebar.css">
+    <script src={{ asset('js/script.js') }}></script>
 
 </head>
 
 <body>
     <header>
-        @include('part.sidebar') 
+        @include('part.sidebar')
+        @include('part.navbar')
     </header>
     <div class="all-comp">
         <!-- Legenda -->
@@ -36,17 +44,18 @@
 
         </div>
 
-        <div class="interactive-map">           
+        <div class="interactive-map">
 
-            @if (($info) === "Jaringan")
-                <img src={{ asset("img/map-itenas-ed3-ja.jpg") }} class="mx-auto d-block imageMaps" alt="Koneksi / Server /  bermasalah cuk">
+            @if ($info === 'Jaringan')
+                <img src={{ asset('img/map-itenas-ed3-ja.jpg') }} class="mx-auto d-block imageMaps"
+                    alt="Koneksi / Server /  bermasalah cuk">
                 <div class="container details">
                     <div class="detail-table">
                         <a href="/jtable" class="text-decoration-none">
                             <button type="button" class="btn btn-dark ">Detail</button>
                         </a>
                     </div>
-                </div>           
+                </div>
                 @include('part.Jaringan.gd1')
                 @include('part.Jaringan.gd2')
                 @include('part.Jaringan.gd3')
@@ -76,9 +85,9 @@
                 @include('part.Jaringan.gd23')
                 @include('part.Jaringan.gd24')
                 @include('part.Jaringan.gd25')
-
-            @elseif (($info) === "Aset")
-                <img src={{ asset("img/map-itenas-ed3-as.jpg") }} class="mx-auto d-block imageMaps" alt="Koneksi / Server /  bermasalah cuk">  
+            @elseif ($info === 'Aset')
+                <img src={{ asset('img/map-itenas-ed3-as.jpg') }} class="mx-auto d-block imageMaps"
+                    alt="Koneksi / Server /  bermasalah cuk">
                 @include('part.Aset.gd1')
                 @include('part.Aset.gd2')
                 @include('part.Aset.gd3')
@@ -109,8 +118,8 @@
                 @include('part.Aset.gd24')
                 @include('part.Aset.gd25')
             @endif
-            
-            
+
+
 
         </div>
     </div>
