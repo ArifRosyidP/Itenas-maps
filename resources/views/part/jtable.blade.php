@@ -13,16 +13,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+    </script>
 
     <!-- Custom -->
-    <link rel="stylesheet" href={{ asset("css/style.css") }}>
-    <link rel="stylesheet" href={{ asset("css/style2.css") }}>
+    <link rel="stylesheet" href={{ asset('css/style.css') }}>
+    <link rel="stylesheet" href={{ asset('css/stylesidebar.css') }}>
     <link rel="stylesheet" href="css/stylenavbar.css">
-    <script src={{ asset("js/script.js") }}></script>
+    <script src={{ asset('js/script.js') }}></script>
 </head>
 
 <body>
@@ -31,7 +38,7 @@
     </header>
 
     <!-- <div class="container details"> -->
-    <div class="container details position-absolute">
+    <div class="container kembali">
         <div class="detail-table">
             <a href="/" class="text-decoration-none">
                 <button type="button" class="btn btn-success ">Kembali</button>
@@ -62,16 +69,15 @@
             <tbody>
                 @php
                     $num = 1;
-                @endphp                
+                @endphp
                 @foreach ($ssids as $ssid)
-                <tr>
-                    <th scope="row">{{ $num++ }}</th>
-                    <td>{{ ($ssid->Gedung->name === "") ? "-" : ($ssid->Gedung->name) }}</td>
-                    <td>{{ ($ssid->Lantai->keterangan === "") ? "-" : ($ssid->Lantai->keterangan) }}</td>
-                    <td>{{ ($ssid->nama_ssid === "") ? "-" : ($ssid->nama_ssid) }}</td>
-                    <td>{{ ($ssid->Status->nama_status === "") ? "-" : ($ssid->Status->nama_status) }}</td>
-                </tr>
-
+                    <tr>
+                        <th scope="row">{{ $num++ }}</th>
+                        <td>{{ $ssid->Gedung->name === '' ? '-' : $ssid->Gedung->name }}</td>
+                        <td>{{ $ssid->Lantai->keterangan === '' ? '-' : $ssid->Lantai->keterangan }}</td>
+                        <td>{{ $ssid->nama_ssid === '' ? '-' : $ssid->nama_ssid }}</td>
+                        <td>{{ $ssid->Status->nama_status === '' ? '-' : $ssid->Status->nama_status }}</td>
+                    </tr>
                 @endforeach
             </tbody>
         </table>

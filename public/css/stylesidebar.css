@@ -1,7 +1,8 @@
 /* Style the links inside the sidenav */
 
 #mySidenav a {
-    margin-top: 320px;
+    /* margin-top: 320px; */
+    margin-top: 20%;
     position: absolute;
     /* Position them relative to the browser window */
     left: -200px;
@@ -17,12 +18,8 @@
     font-size: 20px;
     /* Increase font size */
     border-radius: 0 15px 15px 0;
+    z-index: 2;
     /* Rounded corners on the top right and bottom right side */
-}
-
-#mySidenav a:hover {
-    left: 0px;
-    /* On mouse-over, make the elements appear as they should */
 }
 
 /* The about link: 20px from the top with a green background */
@@ -42,4 +39,48 @@
     outline: 2px solid #ffffff;
     top: 85px;
     background-color: #ff7b01;
+}
+
+@media only screen and (min-width: 768px) {
+    #mySidenav a:hover {
+        left: 0px;
+        /* On mouse-over, make the elements appear as they should */
+    }
+}
+
+@media (max-width: 480px) {
+    #mySidenav a {
+        /* top: 20% !important; */
+        width: 35%;
+        padding: 2%;
+        font-size: 0.6rem;
+        /* Position them relative to the browser window */
+        /* left: 200px; */
+        left: -100%;
+        margin: 100%;
+        margin-top: -5%;
+    }
+
+    #mySidenav[disabled]:hover {
+        pointer-events: none;
+    }
+
+    #jaringan {
+        color: #000000;
+        outline: 2px solid #ff7b01;
+        top: 5%;
+        /* background-color: #04AA6D; */
+        background-color: #ffffff;
+    }
+
+    #aset {
+        color: #ffffff;
+        outline: 2px solid #ffffff;
+        top: 10%;
+        background-color: #ff7b01;
+    }
+    .logowsidebaro,
+    .logowsidebarw {
+        font-size: 0.8rem;
+    }
 }
