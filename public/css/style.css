@@ -1,89 +1,89 @@
 html,
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  /* this actually helpful <3 */
-  /* overflow-x: hidden; */
-  /* max-width: 100%; */
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* this actually helpful <3 */
+    /* overflow-x: hidden; */
+    /* max-width: 100%; */
 }
 
 .container.details {
-  position: absolute;
-  top: 23%;
-  z-index: 1;
-  /* height: auto; */
-  width: 40vw;
-  /* background-color: red; */
-  left: 5%;
+    position: absolute;
+    top: 23%;
+    z-index: 1;
+    /* height: auto; */
+    width: 40vw;
+    /* background-color: red; */
+    left: 5%;
 }
 
 .detail-table {
-  /* background-color: red; */
-  display: inline-block;
-  /* display: inline-block; */
+    /* background-color: red; */
+    display: inline-block;
+    /* display: inline-block; */
 }
 
 .detail-table a button {
-  background-color: orange;
-  color: rgb(255, 255, 255);
-  font-size: 1.5rem;
-  border-style: none;
+    background-color: orange;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    border-style: none;
 }
 
 /* The Maps */
 .interactive-map {
-  position: relative;
-  /* display: block; */
-  width: 100%;
-  /* RKGK Responsive */
-  display: inline-block;
+    position: relative;
+    /* display: block; */
+    width: 100%;
+    /* RKGK Responsive */
+    display: inline-block;
 }
 
 .interactive-map > img {
-  position: relative;
-  width: 100%;
-  /* RKGK Responsive */
-  /* max-width: 100%; */
-  height: auto;
-  display: block;
+    position: relative;
+    width: 100%;
+    /* RKGK Responsive */
+    /* max-width: 100%; */
+    height: auto;
+    display: block;
 }
 
 /* The Mark */
 
 .info {
-  position: absolute;
-  /* display: block; */
-  text-align: center;
-  /* popup */
-  z-index: 0;
+    position: absolute;
+    /* display: block; */
+    text-align: center;
+    /* popup */
+    z-index: 0;
 }
 
 .info i:not(.logow, .logoed) {
-  color: rgb(194, 6, 6);
-  opacity: 0;
-  /* RKGK Responsive */
-  position: relative;
+    color: rgb(194, 6, 6);
+    opacity: 0;
+    /* RKGK Responsive */
+    position: relative;
 }
 
 /* RKGK Responsive */
 
 .info i:not(.logow):before {
-  left: 50%;
-  transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* .info>i:not(.gd25, .gd23, .gd24) { */
 
 .info > i {
-  /* font-size: 1.9em; */
-  font-size: 2.18vw;
-  /* font-size: 2.23rem; */
-  /* em for scaling, vw for responsiveness */
-  /* font-size: 2.23em; */
-  /* opacity: 0; */
-  /* position: relative; */
+    /* font-size: 1.9em; */
+    font-size: 2.18vw;
+    /* font-size: 2.23rem; */
+    /* em for scaling, vw for responsiveness */
+    /* font-size: 2.23em; */
+    /* opacity: 0; */
+    /* position: relative; */
 }
 
 /* .jaringanul {
@@ -93,104 +93,96 @@ body {
 /* popuplogo */
 
 .logow {
-  color: orange;
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-  font-size: 1.8vw;
+    color: orange;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-size: 1.8vw;
 }
 
 .logowsidebaro {
-  padding-right: 20px;
-  color: orange;
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-  font-size: 1.8vw;
+    padding-right: 20px;
+    color: orange;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-size: 1.8vw;
 }
 
 .logowsidebarw {
-  padding-right: 20px;
-  color: white;
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-  font-size: 1.8vw;
+    padding-right: 20px;
+    color: white;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-size: 1.8vw;
 }
 
 .logoed {
-  color: rgb(255, 115, 0);
-  position: absolute;
-  right: 7%;
-  top: 9%;
+    color: rgb(255, 115, 0);
+    position: absolute;
+    right: 7%;
+    top: 9%;
 }
 
 .jaringantext > p {
-  /* didnt fuckin work */
-  /* p>.jaringantext { */
-  color: white;
-  font-weight: 500;
-  font-size: 0.1em;
+    /* didnt fuckin work */
+    /* p>.jaringantext { */
+    color: white;
+    font-weight: 500;
+    font-size: 0.1em;
 }
 
 .asettext {
-  color: rgb(255, 255, 255);
-  font-weight: 500;
-  font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .btnaset {
-  /* color: black;
+    /* color: black;
   font-weight: 500;
   font-size: 1rem; */
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .btn-go {
-font-weight: 500;
-font-size: 1rem;
-color: #212529;
-background-color: rgb(255, 255, 255);
-border-color: #000000
+    font-weight: 500;
+    font-size: 1rem;
+    color: #212529;
+    background-color: rgb(255, 255, 255);
+    border-color: #000000;
 }
 
 .btn-go:hover {
-color: #212529;
-background-color: #ff9900;
-border-color: #000000
+    color: #212529;
+    background-color: #ff9900;
+    border-color: #000000;
 }
 
-
 .editjalo {
-  color: black;
+    color: black;
 }
 
 /* Marker positioning, etc */
 .info-item {
-  background-color: white;
-  box-shadow: -5px -5px 15px rgba(48, 54, 61, 0.2);
-  /* top: -200%; */
-  padding: 5% 40%;
-  border-radius: 16px;
-  margin-top: -280%;
-  /* right: calc(-380%); */
-  /* left: calc(-360%); */
-  right: -8.4vw;
-  /* right: -380%; */
-  bottom: 100%;
-  /* RKGK */
-  position: absolute;
-  /* position: relative; */
-  /* width: 600%; */
-  /* max-width: 100%; */
-  width: 18.3vw;
-  /* width: 22em; */
-  height: auto;
-  /* popup */
-  opacity: 0;
-  pointer-events: none;
-  /* z-index: 999999; */
-}
-
-.info-item:not(.titlegd) {
-  /* font size also didnt work wtf */
-  /* font-size: 100em; */
-  /* font-size: 1.2em; */
-  /* font-weight: 300; */
+    background-color: white;
+    box-shadow: -5px -5px 15px rgba(48, 54, 61, 0.2);
+    /* top: -200%; */
+    padding: 5% 40%;
+    border-radius: 16px;
+    margin-top: -280%;
+    /* right: calc(-380%); */
+    /* left: calc(-360%); */
+    right: -8.4vw;
+    /* right: -380%; */
+    bottom: 100%;
+    /* RKGK */
+    position: absolute;
+    /* position: relative; */
+    /* width: 600%; */
+    /* max-width: 100%; */
+    width: 18.3vw;
+    /* width: 22em; */
+    height: auto;
+    /* popup */
+    opacity: 0;
+    pointer-events: none;
+    /* z-index: 999999; */
 }
 
 /* for smaller markers */
@@ -205,11 +197,11 @@ border-color: #000000
 } */
 
 .titlegd {
-  /* font size ga work cuk */
-  /* background-color: white; */
-  margin-top: 0.5vh;
-  /* margin-top: 5vh; */
-  margin-bottom: 2.2vh;
+    /* font size ga work cuk */
+    /* background-color: white; */
+    margin-top: 0.5vh;
+    /* margin-top: 5vh; */
+    margin-bottom: 2.2vh;
 }
 
 /* .info-item>p,
@@ -223,168 +215,168 @@ a {
 /* arrow */
 
 .info-item::after {
-  content: "";
-  top: 100%;
-  /* bottom: 100%; */
-  right: 45.5%;
-  /* left: 50%; */
-  border: solid transparent;
-  /* height: 0; */
-  /* width: 0; */
-  position: absolute;
-  pointer-events: none;
-  /* border-color: transparent; */
-  border-top-color: white;
-  border-width: 20px;
-  /* border-width: 100000%; */
-  margin-left: -20px;
-  /* z-index: 99999; */
-  /* z-index: 1; */
-  /* popup */
+    content: "";
+    top: 100%;
+    /* bottom: 100%; */
+    right: 45.5%;
+    /* left: 50%; */
+    border: solid transparent;
+    /* height: 0; */
+    /* width: 0; */
+    position: absolute;
+    pointer-events: none;
+    /* border-color: transparent; */
+    border-top-color: white;
+    border-width: 20px;
+    /* border-width: 100000%; */
+    margin-left: -20px;
+    /* z-index: 99999; */
+    /* z-index: 1; */
+    /* popup */
 }
 
 .info:hover .info-item {
-  pointer-events: auto;
-  opacity: 1;
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .info:hover {
-  z-index: 1;
-  animation-name: slideUp;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  /* animation: slideUp 2s linear infinite; */
-  /* display: block; */
-  transition: 0.5s ease-in-out;
+    z-index: 1;
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    /* animation: slideUp 2s linear infinite; */
+    /* display: block; */
+    transition: 0.5s ease-in-out;
 }
 
 .clearfix {
-  clear: both;
+    clear: both;
 }
 
 /* Animation */
 @keyframes slideUp {
-  0%,
-  50% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
+    0%,
+    50% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
 
-  50%,
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    50%,
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Interactive Stuff */
 /* phone */
 @media (max-width: 480px) {
-  body {
-    background-color: #f6f5f0 !important;
-    background-repeat: no-repeat;
-    /* overflow-x: hidden;
+    body {
+        background-color: #f6f5f0 !important;
+        background-repeat: no-repeat;
+        /* overflow-x: hidden;
     overflow-y: hidden; */
-    overflow: hidden;
-    /* RKGK, if still want vertical popup*/
-    /* margin: 0px; */
-    padding-top: 90px;
-    /* height: 100%; */
-  }
+        overflow: hidden;
+        /* RKGK, if still want vertical popup*/
+        /* margin: 0px; */
+        padding-top: 90px;
+        /* height: 100%; */
+    }
 
-  .container.details {
-    margin-top: 3px;
-    top: 22%;
-    right: -2.3%;
-  }
+    .container.details {
+        margin-top: 3px;
+        top: 22%;
+        right: -2.3%;
+    }
 
-  .detail-table a button {
-    /* background-color: red; */
-    padding: 8% 20%;
-    font-size: 0.45rem;
-  }
+    .detail-table a button {
+        /* background-color: red; */
+        padding: 8% 20%;
+        font-size: 0.45rem;
+    }
 
-  /* arrow size */
-  .info-item::after {
-    top: 100%;
-    /* bottom: 100%; */
-    right: 35%;
-    /* left: 50%; */
-    /* height: 0; */
-    /* width: 0; */
-    /* border-color: transparent; */
-    /* border-top-color: white; */
-    /* border-top-color: red; */
-    border-width: 3.5vw;
-    margin-left: 5px;
-    /* margin-left: -20px; */
-    /* z-index: 99999; */
-    /* text-overflow: clip; */
-  }
+    /* arrow size */
+    .info-item::after {
+        top: 100%;
+        /* bottom: 100%; */
+        right: 35%;
+        /* left: 50%; */
+        /* height: 0; */
+        /* width: 0; */
+        /* border-color: transparent; */
+        /* border-top-color: white; */
+        /* border-top-color: red; */
+        border-width: 3.5vw;
+        margin-left: 5px;
+        /* margin-left: -20px; */
+        /* z-index: 99999; */
+        /* text-overflow: clip; */
+    }
 
-  /* popup item - all */
-  .info-item {
-    /* top: -200%; */
-    padding: 0% 0% 50% !important;
-    border-radius: 16px;
-    /* margin: 0% 50px; */
-    /* margin-bottom: -0.1em !important; */
-    /* right: calc(-380%); */
-    /* left: calc(-360%); */
-    /* right: -8.4vw; */
-    right: -10.2vw;
-    /* right: -900%; */
-    bottom: 135%;
-    /* RKGK */
-    /* width: 30vw; */
-    width: 22vw;
-    height: auto;
-    /* background-color: red; */
-    /* width: 18.3vw; */
-  }
+    /* popup item - all */
+    .info-item {
+        /* top: -200%; */
+        padding: 0% 0% 50% !important;
+        border-radius: 16px;
+        /* margin: 0% 50px; */
+        /* margin-bottom: -0.1em !important; */
+        /* right: calc(-380%); */
+        /* left: calc(-360%); */
+        /* right: -8.4vw; */
+        right: -10.2vw;
+        /* right: -900%; */
+        bottom: 135%;
+        /* RKGK */
+        /* width: 30vw; */
+        width: 22vw;
+        height: auto;
+        /* background-color: red; */
+        /* width: 18.3vw; */
+    }
 
-  /* logo,text (without title) */
-  .info-item-wraping {
-    padding: 1% 33%;
-  }
-  /* icon size */
-  .logow {
-    color: orange;
-    font-size: 4.2vw;
-  }
-  /* font size */
-  p.titlegd {
-    margin-top: 0vh !important;
-    margin-bottom: -0.2vh !important;
-    /* apparently you must do this to overwriting bs5. */
-    font-size: 0.75rem !important;
-  }
+    /* logo,text (without title) */
+    .info-item-wraping {
+        padding: 1% 33%;
+    }
+    /* icon size */
+    .logow {
+        color: orange;
+        font-size: 4.2vw;
+    }
+    /* font size */
+    p.titlegd {
+        margin-top: 0vh !important;
+        margin-bottom: -0.2vh !important;
+        /* apparently you must do this to overwriting bs5. */
+        font-size: 0.75rem !important;
+    }
 
-  p.jaringantext {
-    font-size: 0.48em !important;
-    padding: 0% 0%;
-    margin: 0% 0%;
-  }
+    p.jaringantext {
+        font-size: 0.48em !important;
+        padding: 0% 0%;
+        margin: 0% 0%;
+    }
 
-  .btnaset {
-    /* color: black;
+    .btnaset {
+        /* color: black;
     font-weight: 500;
     font-size: 1rem; */
-    padding-bottom: 10px!important; 
-  }
+        padding-bottom: 10px !important;
+    }
 
-  .btn-go {
-    width: 70px !important;
-    font-weight: 500;
-    font-size: 0.5rem !important;
-    color: #212529;
-    background-color: rgb(255, 255, 255);
-    border-color: #000000
-  }
+    .btn-go {
+        width: 70px !important;
+        font-weight: 500;
+        font-size: 0.5rem !important;
+        color: #212529;
+        background-color: rgb(255, 255, 255);
+        border-color: #000000;
+    }
 
-  .btn-go:hover {
-    color: #212529;
-    background-color: #ff9900;
-    border-color: #000000
-  }
+    .btn-go:hover {
+        color: #212529;
+        background-color: #ff9900;
+        border-color: #000000;
+    }
 }
