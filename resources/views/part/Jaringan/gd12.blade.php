@@ -13,12 +13,12 @@
                     <div class="col info-item-wraping">
                         <i class="fa-solid fa-download logow "></i>
                         <!-- <p class="jaringantext"> - Mbps</p> -->
-                        <p class="jaringantext">{{ ($jargd12->download === 0) ? "-" : ($jargd12->download) }} Mbps</p>
+                        <p class="jaringantext">{{ ($jargd12->download === 0.0) ? "-" : ($jargd12->download) }} Mbps</p>
                     </div>
                     <div class="col info-item-wraping">
                         <i class="fa-solid fa-upload logow"></i>
                         <!-- <p class="jaringantext"> - Mbps</p> -->
-                        <p class="jaringantext">{{ ($jargd12->upload === 0) ? "-" : ($jargd12->upload) }} Mbps</p>
+                        <p class="jaringantext">{{ ($jargd12->upload === 0.0) ? "-" : ($jargd12->upload) }} Mbps</p>
                     </div>
                 </div>
             </div>
