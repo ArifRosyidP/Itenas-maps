@@ -186,12 +186,12 @@ border-color: #000000
   /* z-index: 999999; */
 }
 
-.info-item:not(.titlegd) {
-  /* font size also didnt work wtf */
-  /* font-size: 100em; */
-  /* font-size: 1.2em; */
-  /* font-weight: 300; */
-}
+/* .info-item:not(.titlegd) {
+  font size also didnt work wtf
+  font-size: 100em;
+  font-size: 1.2em;
+  font-weight: 300;
+} */
 
 /* for smaller markers */
 
