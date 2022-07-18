@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Facade;
 
 return [
+    'URL_API' => 'http://api.itenas.ac.id:8080/',
+    'API_KEY' => '284a13407bb5660a4b725312af37b814186056c2',
 
     /*
     |--------------------------------------------------------------------------

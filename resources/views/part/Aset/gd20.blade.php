@@ -8,12 +8,12 @@
                     <div class="col info-item-wraping">
                         <i class="fa-solid fa-building logow "></i>
                         <!-- <p class="jaringantext"> - AP</p> -->
-                        <p class="jaringantext ">{{ ($asgd20->jmlaset === 0) ? "-" : ($asgd20->jmlaset) }} Aset</p>
+                        <p class="jaringantext ">{{ ($asgd20 === 0) ? "-" : ($asgd20) }} Aset</p>
                     </div>
                 </div>
                 <div class="row btnaset">
                     <div class="container px-0 mx-auto">
-                        <a href="https://aset.itenas.ac.id/login" class="text-decoration-none">
+                        <a href="/detailaset/Gedung 20/20" class="text-decoration-none">
                             <button type="button" class="btn btn-go" style="width: 150px; "></i>Detail Aset</button>
                         </a>
                     </div>

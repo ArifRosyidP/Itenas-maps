@@ -5,72 +5,95 @@ namespace App\Http\Controllers;
 use App\Models\Gedung;
 use Illuminate\Http\Request;
 use App\Models\Aset;
+use Illuminate\Support\Facades\Http;
 
 class AsetController extends Controller
 {
     public function index()
     {
+        function aset($idgedung){
+            $num = 0;
+            $res = Http::get(config('app.URL_API').'sum-aset-by-kodegedung',[
+                'APIKEY'=>config('app.API_KEY'), 
+                'kodegedung'=>$idgedung, 
+            ]); 
+            $json=$res->json();
+            return
+            $json["data"][$num++]["total_barang"];
+        }
+        
         return view('layouts/map', [
             "title" => "Peta Aset Itenas",
             "info" => "Aset",
-            "namegd1" => Aset::find(1)->Gedung,
-            "asgd1" => Aset::find(1),
-            "namegd2" => Aset::find(2)->Gedung,
-            "asgd2" => Aset::find(2),
-            "namegd3" => Aset::find(3)->Gedung,
-            "asgd3" => Aset::find(3),
-            "namegd4" => Aset::find(4)->Gedung,
-            "asgd4" => Aset::find(4),
-            "namegd5a" => Aset::find(5)->Gedung,
-            "asgd5a" => Aset::find(5),
-            "namegd5b" => Aset::find(6)->Gedung,
-            "asgd5b" => Aset::find(6),
-            "namegd5c" => Aset::find(7)->Gedung,
-            "asgd5c" => Aset::find(7),
-            "namegd6a" => Aset::find(8)->Gedung,
-            "asgd6a" => Aset::find(8),
-            "namegd6b" => Aset::find(9)->Gedung,
-            "asgd6b" => Aset::find(9),
-            "namegd8" => Aset::find(10)->Gedung,
-            "asgd8" => Aset::find(10),
-            "namegd9" => Aset::find(11)->Gedung,
-            "asgd9" => Aset::find(11),
-            "namegd10" => Aset::find(12)->Gedung,
-            "asgd10" => Aset::find(12),
-            "namegd11" => Aset::find(13)->Gedung,
-            "asgd11" => Aset::find(13),
-            "namegd12" => Aset::find(14)->Gedung,
-            "asgd12" => Aset::find(14),
-            "namegd13" => Aset::find(15)->Gedung,
-            "asgd13" => Aset::find(15),
-            "namegd14" => Aset::find(16)->Gedung,
-            "asgd14" => Aset::find(16),
-            "namegd14a" => Aset::find(17)->Gedung,
-            "asgd14a" => Aset::find(17),
-            "namegd15" => Aset::find(18)->Gedung,
-            "asgd15" => Aset::find(18),
-            "namegd16" => Aset::find(19)->Gedung,
-            "asgd16" => Aset::find(19),
-            "namegd17" => Aset::find(20)->Gedung,
-            "asgd17" => Aset::find(20),
-            "namegd18" => Aset::find(21)->Gedung,
-            "asgd18" => Aset::find(21),
-            "namegd19a" => Aset::find(22)->Gedung,
-            "asgd19a" => Aset::find(22),
-            "namegd19b" => Aset::find(23)->Gedung,
-            "asgd19b" => Aset::find(23),
-            "namegd20" => Aset::find(24)->Gedung,
-            "asgd20" => Aset::find(24),
-            "namegd21" => Aset::find(25)->Gedung,
-            "asgd21" => Aset::find(25),
-            "namegd22" => Aset::find(26)->Gedung,
-            "asgd22" => Aset::find(26),
-            "namegd23" => Aset::find(27)->Gedung,
-            "asgd23" => Aset::find(27),
-            "namegd24" => Aset::find(28)->Gedung,
-            "asgd24" => Aset::find(28),
-            "namegd25" => Aset::find(29)->Gedung,
-            "asgd25" => Aset::find(29)
+            "namegd1" => Gedung::find(1),
+            "asgd1" => aset('01'),
+            "namegd2" => Gedung::find(2),
+            "asgd2" => aset('02'),
+            "namegd3" => Gedung::find(3),
+            "asgd3" => aset('03'),
+            "namegd4" => Gedung::find(4),
+            "asgd4" => aset('04'),
+            "namegd5a" => Gedung::find(5),
+            "asgd5a" => aset('05'),
+            "namegd5b" => Gedung::find(6),
+            "asgd5b" => aset('05'),
+            "namegd5c" => Gedung::find(7),
+            "asgd5c" => aset('05'),
+            "namegd6a" => Gedung::find(8),
+            "asgd6a" => aset('06'),
+            "namegd6b" => Gedung::find(9),
+            "asgd6b" => aset('06'),
+            "namegd8" => Gedung::find(10),
+            "asgd8" => aset('08'),
+            "namegd9" => Gedung::find(11),
+            "asgd9" => aset('09'),
+            "namegd10" => Gedung::find(12),
+            "asgd10" => aset('10'),
+            "namegd11" => Gedung::find(13),
+            "asgd11" => aset('11'),
+            "namegd12" => Gedung::find(14),
+            "asgd12" => aset('12'),
+            "namegd13" => Gedung::find(15),
+            "asgd13" => aset('13'),
+            "namegd14" => Gedung::find(16),
+            "asgd14" => aset('14'),
+            "namegd14a" => Gedung::find(17),
+            "asgd14a" => aset('14'),
+            "namegd15" => Gedung::find(18),
+            "asgd15" => aset('15'),
+            "namegd16" => Gedung::find(19),
+            "asgd16" => aset('16'),
+            "namegd17" => Gedung::find(20),
+            "asgd17" => aset('17'),
+            "namegd18" => Gedung::find(21),
+            "asgd18" => aset('18'),
+            "namegd19a" => Gedung::find(22),
+            "asgd19a" => aset('19'),
+            "namegd19b" => Gedung::find(23),
+            "asgd19b" => aset('19'),
+            "namegd20" => Gedung::find(24),
+            "asgd20" => aset('20'),
+            "namegd21" => Gedung::find(25),
+            "asgd21" => aset('21'),
+            "namegd22" => Gedung::find(26),
+            "asgd22" => aset('22'),
+            "namegd23" => Gedung::find(27),
+            "asgd23" => aset('23'),
+            "namegd24" => Gedung::find(28),
+            "asgd24" => aset('24'),
+            "namegd25" => Gedung::find(29),
+            "asgd25" => aset('25'),
         ]);
+        
     }
+
+    // public function getdataaset($tipe,$gedung)
+    // {
+    //     $res = Http::get(config('app.URL_API').$tipe,[
+    //         'APIKEY'=>config('app.API_KEY'), 
+    //         'kodegedung'=>$gedung, 
+    //     ]); 
+    //     $json=$res->json(); 
+    //     return $json['data'];
+    // }
 }
