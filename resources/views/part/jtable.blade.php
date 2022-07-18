@@ -41,7 +41,7 @@
     <div class="container kembali">
         <div class="detail-table">
             <a href="/" class="text-decoration-none">
-                <button type="button" class="btn btn-success ">Kembali</button>
+                <button type="button" class="btn btn-dark ">Kembali</button>
             </a>
         </div>
     </div>
