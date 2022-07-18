@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $title }}</title>
+
+    <!-- Icon -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src="https://kit.fontawesome.com/57a5f9b5e4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+    </script>
+
+    <!-- Custom -->
+    <link rel="stylesheet" href={{ asset('css/style.css') }}>
+    <link rel="stylesheet" href={{ asset('css/stylesidebar.css') }}>
+    <link rel="stylesheet" href="css/stylenavbar.css">
+    <script src={{ asset('js/script.js') }}></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <!-- <div class="container details"> -->
+    <div class="container kembali">
+        <div class="detail-table">
+            <a href="/aset" class="text-decoration-none">
+                <button type="button" class="btn btn-success ">Kembali</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="titlet text-center my-3">
+        <h1>{{ $title }}</h1>
+    </div>
+
+    <div class="titlet text-center my-3">
+        <h3>{{ $ket }}</h3>
+    </div>
+
+    <!-- The Table -->
+    <div class="container">
+        <table class="table table-responsive-sm table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Nama Golongan</th>
+                    <th scope="col">Deskripsi</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @php
+                    $num = 1;
+                @endphp
+                @foreach ($detailAset as $das)
+                    <tr>
+                        <th scope="row">{{ $num++ }}</th>
+                        <td>{{ $das['nama_golongan'] }}</td>
+                        <td>{{ $das["deskripsi"] }}</td>
+                        <td>{{ $das["total"] }}</td>
+                        {{-- <td>{{ $das->Gedung->name === '' ? '-' : $ssid->Gedung->name }}</td>
+                        <td>{{ $das->Lantai->keterangan === '' ? '-' : $ssid->Lantai->keterangan }}</td>
+                        <td>{{ $das->nama_ssid === '' ? '-' : $ssid->nama_ssid }}</td> --}}
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer>
+
+    </footer>
+</body>
+
+<style>
+</style>
+
+</html>
