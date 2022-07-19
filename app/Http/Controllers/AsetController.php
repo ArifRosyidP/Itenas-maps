@@ -12,14 +12,13 @@ class AsetController extends Controller
     public function index()
     {
         function aset($idgedung){
-            $num = 0;
             $res = Http::get(config('app.URL_API').'sum-aset-by-kodegedung',[
                 'APIKEY'=>config('app.API_KEY'), 
                 'kodegedung'=>$idgedung, 
             ]); 
             $json=$res->json();
             return
-            $json["data"][$num++]["total_barang"];
+            $json["data"][0]["total_barang"];
         }
         
         return view('layouts/map', [
