@@ -30,6 +30,9 @@
     <link rel="stylesheet" href={{ asset('css/stylesidebar.css') }}>
     <link rel="stylesheet" href="css/stylenavbar.css">
     <script src={{ asset('js/script.js') }}></script>
+
+    <!-- Icon title -->
+    <link href="https://tik.itenas.ac.id/front/assets/img/logo-tik-favicon.png" rel="icon">
 </head>
 
 <body>
