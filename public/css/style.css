@@ -302,7 +302,9 @@ a {
         background-repeat: no-repeat;
         /* overflow-x: hidden;
     overflow-y: hidden; */
-        overflow: hidden;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        /* overflow: hidden; */
         /* RKGK, if still want vertical popup*/
         /* margin: 0px; */
         padding-top: 90px;
