@@ -74,7 +74,7 @@
                     <tr>
                         <th scope="row">{{ $num++ }}</th>
                         <td>{{ $ssid->Gedung->name === '' ? '-' : $ssid->Gedung->name }}</td>
-                        <td>{{ $ssid->Lantai->keterangan === '' ? '-' : $ssid->Lantai->keterangan }}</td>
+                        <td>{{ $ssid->lantai->keterangan === '' ? '-' : $ssid->lantai->keterangan }}</td>
                         <td>{{ $ssid->nama_ssid === '' ? '-' : $ssid->nama_ssid }}</td>
                         <td>{{ $ssid->Status->nama_status === '' ? '-' : $ssid->Status->nama_status }}</td>
                     </tr>
