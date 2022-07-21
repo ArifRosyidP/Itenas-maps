@@ -53,6 +53,17 @@
         <h1>{{ $title }}</h1>
     </div>
 
+    <div class="row justify-content-center mt-3 mb-3">
+        <div class="col-md-6">
+            <form action="/jtable">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
+                    <button class="btn btn-dark" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- The Table -->
     <div class="container">
         <table class="table table-responsive-sm table-hover text-center">

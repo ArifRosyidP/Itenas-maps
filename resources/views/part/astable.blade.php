@@ -54,7 +54,18 @@
     </div>
 
     <div class="titlet text-center my-3">
-        <h3>{{ $ket }}</h3>
+        <h3>{{ $namaged }}</h3>
+    </div>
+
+    <div class="row justify-content-center mt-3 mb-3">
+        <div class="col-md-6">
+            <form action="/detailaset/{{ $namaged }}/{{ $noged }}">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
+                    <button class="btn btn-dark" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- The Table -->
