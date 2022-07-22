@@ -26,22 +26,43 @@ body {
     height: auto;
     top: 15%;
     z-index: 1;
+    /* display: inline; */
     /* height: auto; */
     /* width: 40vw; */
     /* background-color: red; */
     /* left: 5%; */
-    right: 15%;
-    width: 100%;
+
+    /* right: 15%; */
+    /* width: 100%; */
 }
 
+/* .detail-table { */
+/* position: absolute; */
+/* background-color: red !important; */
+/* display: block; */
+/* display: inline-block; */
+/* } */
 .detail-table {
-    /* position: absolute; */
-    /* background-color: red !important; */
-    /* display: block; */
-    display: inline-block;
+    right: 85%;
 }
 
-.detail-table a button {
+.server-sebaran {
+    right: 70%;
+}
+
+.server-kondisi {
+    right: 55.5%;
+}
+
+.detail-table,
+.server-table {
+    /* background-color: red; */
+    display: inline-block;
+    position: absolute;
+}
+
+.detail-table a button,
+.server-table a button {
     /* width: 100%; */
     /* position: relative; */
     background-color: orange;
@@ -312,15 +333,38 @@ a {
     }
 
     .container.details {
-        margin-top: 3px;
-        top: 22%;
+        /* margin-top: 3px; */
+        top: 14%;
         right: -2.3%;
     }
 
-    .detail-table a button {
-        /* background-color: red !important; */
-        padding: 8% 20%;
-        font-size: 0.45rem;
+    .detail-table {
+        right: 91% !important;
+    }
+
+    .server-sebaran {
+        right: 75% !important;
+    }
+
+    .server-kondisi {
+        right: 56.5% !important;
+    }
+
+    /* .server-sebaran a {
+        margin-top: -10%;
+    } */
+
+    .server-sebaran a,
+    .server-kondisi a {
+        white-space: nowrap;
+    }
+
+    .detail-table a button,
+    .server-table a button {
+        display: inline-block;
+        padding: 0% 20%;
+        font-size: 0.45em;
+        border-radius: 5%;
     }
 
     /* arrow size */
