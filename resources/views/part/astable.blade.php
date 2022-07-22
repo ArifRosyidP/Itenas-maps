@@ -60,19 +60,6 @@
         <h3>{{ $namaged }}</h3>
     </div>
 
-    <div class="container p-3" >
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form action="/detailaset/{{ $namaged }}/{{ $noged }}" method="get">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
-                        <button class="btn btn-dark" type="submit">Search</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <!-- The Table -->
     <div class="container" id="aset-list">
         <table class="table table-responsive-sm table-hover text-center">
