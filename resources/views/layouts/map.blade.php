@@ -54,10 +54,30 @@
                 <img src={{ asset('img/map-itenas-ed3-ja.jpg') }} class="mx-auto d-block imageMaps"
                     alt="Koneksi / Server /  bermasalah cuk">
                 <div class="container details">
-                    <div class="detail-table">
-                        <a href="/jtable" class="text-decoration-none">
-                            <button type="button" class="btn btn-dark ">Detail</button>
-                        </a>
+                    <div class="row">
+                        <div class="col">
+                            <div class="detail-table">
+                                <a href="/jtable" class="text-decoration-none">
+                                    <button type="button" class="btn btn-dark ">Detail</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <div class="server-table server-sebaran">
+                                <a href="/sebtable" class="text-decoration-none">
+                                    <button type="button" class="btn btn-dark ">Sebaran Server</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <div class="server-table server-kondisi">
+                                <a href="/kontable" class="text-decoration-none">
+                                    <button type="button" class="btn btn-dark ">Kondisi Server</button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 @include('part.Jaringan.gd1')

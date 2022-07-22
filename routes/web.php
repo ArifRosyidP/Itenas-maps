@@ -5,6 +5,7 @@ use App\Http\Controllers\AsetController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\JaringanController;
 use App\Http\Controllers\DetailAsetController;
+use App\Http\Controllers\konservercontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,12 +26,13 @@ Route::get('/aset', [AsetController::class, 'index']);
 
 Route::get('/jtable', [DetailController::class, 'index']);
 
+Route::get('/kontable', [konservercontroller::class, 'index']);
+
 // Route::get('/getdataaset/{tipe}/{gedung}', [DetailController::class, 'getdataaset']);
 Route::get('/detailaset/{nama}/{gedung}', [DetailAsetController::class, 'getdataaset']);
 
 Route::get('/about', function () {
-    return view('welcome',[
+    return view('welcome', [
         "title" => "About"
     ]);
 });
-
