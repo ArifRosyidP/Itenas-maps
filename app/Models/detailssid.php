@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use App\Models\Gedung;
-use App\Models\Lantai;
-use App\Models\Status;
+use App\Models\lantai;
+use App\Models\status;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
