@@ -26,13 +26,15 @@
     </script>
 
     <!-- Custom -->
-    <link rel="stylesheet" href={{ asset('css/style.css') }}>
-    <link rel="stylesheet" href={{ asset('css/stylenavbar.css') }}>
-    <link rel="stylesheet" href="css/stylesidebar.css">
-    <script src={{ asset('js/script.js') }}></script>
+    <link rel="stylesheet" href={{ asset("css/style.css") }}>
+    <link rel="stylesheet" href={{ asset("css/stylenavbar.css") }}>
+    <link rel="stylesheet" href={{ asset("css/stylesidebar.css") }}>
+    <script src={{ asset("js/script.js") }}></script>
 
     <!-- Icon title -->
     <link href="https://tik.itenas.ac.id/front/assets/img/logo-tik-favicon.png" rel="icon">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
 

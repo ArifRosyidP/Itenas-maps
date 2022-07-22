@@ -30,7 +30,6 @@ Route::get('/kontable', [konservercontroller::class, 'index']);
 
 // Route::get('/getdataaset/{tipe}/{gedung}', [DetailController::class, 'getdataaset']);
 Route::get('/detailaset/{nama}/{gedung}', [DetailAsetController::class, 'getdataaset']);
-// Route::get('/detailaset/{nama}/{gedung}/{obj}', [DetailAsetController::class, 'search']);
 
 Route::get('/about', function () {
     return view('welcome', [
