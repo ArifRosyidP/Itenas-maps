@@ -26,13 +26,16 @@
     </script>
 
     <!-- Custom -->
-    <link rel="stylesheet" href={{ asset('css/style.css') }}>
-    <link rel="stylesheet" href={{ asset('css/stylesidebar.css') }}>
-    <link rel="stylesheet" href="css/stylenavbar.css">
-    <script src={{ asset('js/script.js') }}></script>
+    <link rel="stylesheet" href={{ asset("css/style.css") }}>
+    <link rel="stylesheet" href={{ asset("css/stylenavbar.css") }}>
+    <link rel="stylesheet" href={{ asset("css/stylesidebar.css") }}>
+    <script src={{ asset("js/script.js") }}></script>
+    <script src={{ asset("js/scriptasetsearch.js") }}></script>
 
     <!-- Icon title -->
     <link href="https://tik.itenas.ac.id/front/assets/img/logo-tik-favicon.png" rel="icon">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -57,19 +60,21 @@
         <h3>{{ $namaged }}</h3>
     </div>
 
-    <div class="row justify-content-center mt-3 mb-3">
-        <div class="col-md-6">
-            <form action="/detailaset/{{ $namaged }}/{{ $noged }}">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
-                    <button class="btn btn-dark" type="submit">Search</button>
-                </div>
-            </form>
+    <div class="container p-3" >
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/detailaset/{{ $namaged }}/{{ $noged }}" method="get">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
+                        <button class="btn btn-dark" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
     <!-- The Table -->
-    <div class="container">
+    <div class="container" id="aset-list">
         <table class="table table-responsive-sm table-hover text-center">
             <thead class="table-dark">
                 <tr>
@@ -97,14 +102,7 @@
             </tbody>
         </table>
     </div>
-
-
-    <footer>
-
-    </footer>
+    
 </body>
-
-<style>
-</style>
 
 </html>

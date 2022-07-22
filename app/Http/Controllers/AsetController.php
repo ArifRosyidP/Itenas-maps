@@ -12,13 +12,28 @@ class AsetController extends Controller
     public function index()
     {
         function aset($idgedung){
-            $res = Http::get(config('app.URL_API').'sum-aset-by-kodegedung',[
-                'APIKEY'=>config('app.API_KEY'), 
-                'kodegedung'=>$idgedung, 
-            ]); 
-            $json=$res->json();
+            $curl = curl_init();
+            curl_setopt($curl, CURLOPT_URL, "http://api.itenas.ac.id:8080/sum-aset-by-kodegedung?APIKEY=284a13407bb5660a4b725312af37b814186056c2&kodegedung={$idgedung}");
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+            $output = curl_exec($curl);
+            curl_close($curl);
+            
+            $output = json_decode($output, true);
+
+            isset($output["data"][0]["total_barang"]);
+            $total_aset = isset($output["data"][0]["total_barang"]) ? ($output["data"][0]["total_barang"]) : 0;
+
             return
-            $json["data"][0]["total_barang"];
+            $total_aset;
+            // var_dump($total_aset);
+
+            // $res = Http::get(config('app.URL_API').'sum-aset-by-kodegedung',[
+            //     'APIKEY'=>config('app.API_KEY'), 
+            //     'kodegedung'=>$idgedung, 
+            // ]); 
+            // $json=$res->json();
+            // return
+            // $json["data"][0]["total_barang"];
         }
         
         return view('layouts/map', [
