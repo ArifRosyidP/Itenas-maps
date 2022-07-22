@@ -26,7 +26,7 @@ Route::get('/aset', [AsetController::class, 'index']);
 
 Route::get('/jtable', [DetailController::class, 'index']);
 
-Route::get('/kontable', [konservercontroller::class, 'index']);
+Route::get('/kondisi-server', [konservercontroller::class, 'index']);
 
 // Route::get('/getdataaset/{tipe}/{gedung}', [DetailController::class, 'getdataaset']);
 Route::get('/detailaset/{nama}/{gedung}', [DetailAsetController::class, 'getdataaset']);
