@@ -33,6 +33,21 @@
 
     <!-- Icon title -->
     <link href="https://tik.itenas.ac.id/front/assets/img/logo-tik-favicon.png" rel="icon">
+
+
+    {{-- jquery --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    {{-- datatable.js --}}
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#table_id').DataTable();
+        });
+    </script>
 </head>
 
 <body>
@@ -55,7 +70,7 @@
             <h1>{{ $title }}</h1>
         </div>
 
-        <div class="container p-3">
+        {{-- <div class="container p-3">
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <form action="/jtable">
@@ -67,11 +82,12 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <!-- The Table -->
         <div class="container cus-table">
-            <table class="table table-responsive-sm table-hover text-center">
+            {{-- <table class="table table-responsive-sm table-hover text-center" id="table_id"> --}}
+            <table id="table_id" class="table display">
                 <thead class="table-dark">
                     <tr>
 <<<<<<< HEAD
