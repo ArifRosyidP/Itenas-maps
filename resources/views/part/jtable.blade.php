@@ -33,6 +33,21 @@
 
     <!-- Icon title -->
     <link href="https://tik.itenas.ac.id/front/assets/img/logo-tik-favicon.png" rel="icon">
+
+
+    {{-- jquery --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    {{-- datatable.js --}}
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#table_id').DataTable();
+        });
+    </script>
 </head>
 
 <body>
@@ -49,55 +64,60 @@
         </div>
     </div>
 
-    <div class="titlet text-center my-3">
-        <h1>{{ $title }}</h1>
-    </div>
+    <div class="table-wrap">
 
-    <div class="container p-3" >
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form action="/jtable">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Search.." name="search" value="{{ request('search') }}">
-                        <button class="btn btn-dark" type="submit">Search</button>
-                    </div>
-                </form>
-            </div>
+        <div class="titlet text-center my-3">
+            <h1>{{ $title }}</h1>
         </div>
-    </div>
 
-    <!-- The Table -->
-    <div class="container"> 
-        <table class="table table-responsive-sm table-hover text-center">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Nama Gedung</th>
-                    <!-- <th scope="col">Id Lantai</th>  -->
-                    <th scope="col">Lantai</th>
-                    <!-- <th scope="col">Id SSID</th> -->
-                    <th scope="col">Nama SSID</th>
-                    <th scope="col">Status</th>
-                    <!-- <th scope="col">Speed Download</th> -->
-                    <!-- <th scope="col">Speed Upload</th> -->
-                </tr>
-            </thead>
-            <tbody>
-                @php
-                    $num = 1;
-                @endphp
-                @foreach ($ssids as $ssid)
+        {{-- <div class="container p-3">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form action="/jtable">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search.." name="search"
+                                value="{{ request('search') }}">
+                            <button class="btn btn-dark" type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> --}}
+
+        <!-- The Table -->
+        <div class="container cus-table">
+            {{-- <table class="table table-responsive-sm table-hover text-center" id="table_id"> --}}
+            <table id="table_id" class="table display">
+                <thead class="table-dark">
                     <tr>
-                        <th scope="row">{{ $num++ }}</th>
-                        <td>{{ $ssid->Gedung->name === '' ? '-' : $ssid->Gedung->name }}</td>
-                        <td>{{ $ssid->lantai->keterangan === '' ? '-' : $ssid->lantai->keterangan }}</td>
-                        <td>{{ $ssid->nama_ssid === '' ? '-' : $ssid->nama_ssid }}</td>
-                        <td>{{ $ssid->Status->nama_status === '' ? '-' : $ssid->Status->nama_status }}</td>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Gedung</th>
+                        <!-- <th scope="col">Id Lantai</th>  -->
+                        <th scope="col">Lantai</th>
+                        <!-- <th scope="col">Id SSID</th> -->
+                        <th scope="col">Nama SSID</th>
+                        <th scope="col">Status</th>
+                        <!-- <th scope="col">Speed Download</th> -->
+                        <!-- <th scope="col">Speed Upload</th> -->
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
-        
+                </thead>
+                <tbody>
+                    @php
+                        $num = 1;
+                    @endphp
+                    @foreach ($ssids as $ssid)
+                        <tr>
+                            <th scope="row">{{ $num++ }}</th>
+                            <td>{{ $ssid->Gedung->name === '' ? '-' : $ssid->Gedung->name }}</td>
+                            <td>{{ $ssid->lantai->keterangan === '' ? '-' : $ssid->lantai->keterangan }}</td>
+                            <td>{{ $ssid->nama_ssid === '' ? '-' : $ssid->nama_ssid }}</td>
+                            <td>{{ $ssid->Status->nama_status === '' ? '-' : $ssid->Status->nama_status }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+
+        </div>
     </div>
 
 
