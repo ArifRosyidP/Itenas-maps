@@ -13,9 +13,15 @@
                 </div>
                 <div class="row btnaset">
                     <div class="container px-0 mx-auto">
+                        @if ($asgd15 === 0)
+                        <a class="text-decoration-none">
+                            <button type="button" class="btn btn-dark" style="width: 150px; " disabled></i>Detail Aset</button>
+                        </a>
+                        @else
                         <a href="/detailaset/Gedung 15/15" class="text-decoration-none">
                             <button type="button" class="btn btn-go" style="width: 150px; "></i>Detail Aset</button>
                         </a>
+                        @endif
                     </div>
                 </div>
             </div>

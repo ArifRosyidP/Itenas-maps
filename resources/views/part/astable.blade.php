@@ -30,13 +30,24 @@
     <link rel="stylesheet" href={{ asset('css/stylenavbar.css') }}>
     <link rel="stylesheet" href={{ asset('css/stylesidebar.css') }}>
     <script src={{ asset('js/script.js') }}></script>
-    <script src={{ asset('js/scriptasetsearch.js') }}></script>
 
     <!-- Icon title -->
     <link href="https://tik.itenas.ac.id/front/assets/img/logo-tik-favicon.png" rel="icon">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    {{-- jquery --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    {{-- datatable.js --}}
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#table_id').DataTable();
+        });
+    </script>
+    
 </head>
 
 <body>
@@ -64,7 +75,8 @@
 
         <!-- The Table -->
         <div class="container" id="aset-list">
-            <table class="table table-responsive-sm table-hover text-center">
+            <table id="table_id" class="table display">
+            {{-- <table class="table table-responsive-sm table-hover text-center"> --}}
                 <thead class="table-dark">
                     <tr>
                         <th scope="col">No</th>
