@@ -66,7 +66,7 @@
                         <div class="col">
 
                             <div class="server-table server-sebaran">
-                                <a href="/sebtable" class="text-decoration-none">
+                                <a href="/list-server" class="text-decoration-none">
                                     <button type="button" class="btn btn-dark ">Sebaran Server</button>
                                 </a>
                             </div>
