@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DetailAset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -32,7 +31,7 @@ class DetailAsetController extends Controller
             "title" => "Detail Aset Gedung",
             "namaged"   => $nama,
             "noged"   => $gedung,
-            "detailAset" => DetailAset::where('gedung', $gedung)->paginate(20),
+            "detailAset" => $output,
     
         ]);
     

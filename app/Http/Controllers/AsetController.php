@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gedung;
-use App\Models\DetailAset;
 use Illuminate\Http\Request;
 use App\Models\Aset;
 use Illuminate\Support\Facades\Http;
@@ -12,36 +11,6 @@ class AsetController extends Controller
 {
     public function index()
     {
-        DetailAset::truncate();
-        for ($i = 1; $i <= 30; $i++) {
-            $id = sprintf('%02d', $i);
-            $curl = curl_init();
-            curl_setopt($curl, CURLOPT_URL, "http://api.itenas.ac.id:8080/aset-by-kodegedung?APIKEY=284a13407bb5660a4b725312af37b814186056c2&kodegedung={$id}");
-            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-            $output = curl_exec($curl);
-            curl_close($curl);
-            $output = json_decode($output, true);
-    
-            isset($output["data"]);
-            $output = isset($output["data"]) ? ($output["data"]) : null;
-    
-            // isset($output["data"]);
-            
-            // $output = isset($output["data"]) ? ($output["data"]) : "eror";
-    
-            // dd($output);
-    
-            foreach ($output as $out){
-                DetailAset::create([
-                    'gedung' => $id,
-                    'nama_golongan' => $out['nama_golongan'],
-                    'deskripsi' => $out['deskripsi'],
-                    'total' => $out['total']
-                ]);
-            }
-            
-        }
-        
         function aset($idgedung){
             $curl = curl_init();
             curl_setopt($curl, CURLOPT_URL, "http://api.itenas.ac.id:8080/sum-aset-by-kodegedung?APIKEY=284a13407bb5660a4b725312af37b814186056c2&kodegedung={$idgedung}");
