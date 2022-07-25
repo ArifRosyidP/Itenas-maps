@@ -69,7 +69,7 @@
             <h1>{{ $title }}</h1>
         </div>
 
-        <div class="row justify-content-center mt-3 mb-3">
+        {{-- <div class="row justify-content-center mt-3 mb-3">
             <div class="col-md-6">
                 <form action="/kondisi-server">
                     <div class="input-group mb-3">
@@ -79,12 +79,12 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> --}}
 
         <!-- The Table -->
         <div class="container">
             {{-- <table class="table table-responsive-sm table-hover text-center" id="table_id"> --}}
-            <table id="table_id" class="display">
+            <table id="table_id" class=" table display">
                 <thead class="table-dark">
                     <tr>
                         <th scope="col">No</th>
