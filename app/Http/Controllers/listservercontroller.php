@@ -12,7 +12,8 @@ class listservercontroller extends Controller
     {
         return view('part/listservertable', [
             "title" => "Tabel List Server",
-            "listservers" => Listserver::all()
+            // "listservers" => Listserver::all()
+            "listservers" => Listserver::filter(request(['search']))->get(),
         ]);
     }
 }

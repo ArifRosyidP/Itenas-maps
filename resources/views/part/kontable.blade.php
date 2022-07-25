@@ -49,59 +49,61 @@
         </div>
     </div>
 
-    <div class="titlet text-center my-3">
-        <h1>{{ $title }}</h1>
-    </div>
+    <div class="table-wrap kon">
 
-    <div class="row justify-content-center mt-3 mb-3">
-        <div class="col-md-6">
-            <form action="/jtable">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search.." name="search"
-                        value="{{ request('search') }}">
-                    <button class="btn btn-dark" type="submit">Search</button>
-                </div>
-            </form>
+        <div class="titlet text-center my-3">
+            <h1>{{ $title }}</h1>
+        </div>
+
+        <div class="row justify-content-center mt-3 mb-3">
+            <div class="col-md-6">
+                <form action="/kondisi-server">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search.." name="search"
+                            value="{{ request('search') }}">
+                        <button class="btn btn-dark" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- The Table -->
+        <div class="container">
+            <table class="table table-responsive-sm table-hover text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Tipe</th>
+                        <th scope="col">CPU</th>
+                        <th scope="col">Memory(GB)</th>
+                        <th scope="col">Qty (Unit)</th>
+                        <th scope="col">Kondisi</th>
+                        <th scope="col">Tahun</th>
+                        <th scope="col">Gambar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @php
+                        $num = 1;
+                    @endphp
+                    @foreach ($konservers as $konserver)
+                        <tr>
+                            <th scope="row" class="align-middle">{{ $num++ }}</th>
+                            <td class="align-middle">{{ $konserver->tipe === '' ? '-' : $konserver->tipe }}</td>
+                            <td class="align-middle">{{ $konserver->cpu === '' ? '-' : $konserver->cpu }}</td>
+                            <td class="align-middle">{{ $konserver->memori === '' ? '-' : $konserver->memori }}</td>
+                            <td class="align-middle">{{ $konserver->qty === '' ? '-' : $konserver->qty }}</td>
+                            <td class="align-middle">{{ $konserver->kondisi === '' ? '-' : $konserver->kondisi }}</td>
+                            <td class="align-middle">{{ $konserver->tahun === '' ? '-' : $konserver->tahun }}</td>
+                            {{-- <td>{{ $konserver->gambar === '' ? '-' : $konserver->gambar }}</td> --}}
+                            <td class="align-middle"> <img src="{{ asset('img/img-server/' . $konserver->gambar) }}"
+                                    alt="" height="150"> </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
-
-    <!-- The Table -->
-    <div class="container">
-        <table class="table table-responsive-sm table-hover text-center">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Tipe</th>
-                    <th scope="col">CPU</th>
-                    <th scope="col">Memory(GB)</th>
-                    <th scope="col">Qty (Unit)</th>
-                    <th scope="col">Kondisi</th>
-                    <th scope="col">Tahun</th>
-                    <th scope="col">Gambar</th>
-                </tr>
-            </thead>
-            <tbody>
-                @php
-                    $num = 1;
-                @endphp
-                @foreach ($konservers as $konserver)
-                    <tr>
-                        <th scope="row" class="align-middle">{{ $num++ }}</th>
-                        <td class="align-middle">{{ $konserver->tipe === '' ? '-' : $konserver->tipe }}</td>
-                        <td class="align-middle">{{ $konserver->cpu === '' ? '-' : $konserver->cpu }}</td>
-                        <td class="align-middle">{{ $konserver->memori === '' ? '-' : $konserver->memori }}</td>
-                        <td class="align-middle">{{ $konserver->qty === '' ? '-' : $konserver->qty }}</td>
-                        <td class="align-middle">{{ $konserver->kondisi === '' ? '-' : $konserver->kondisi }}</td>
-                        <td class="align-middle">{{ $konserver->tahun === '' ? '-' : $konserver->tahun }}</td>
-                        {{-- <td>{{ $konserver->gambar === '' ? '-' : $konserver->gambar }}</td> --}}
-                        <td class="align-middle"> <img src="{{ asset('img/img-server/' . $konserver->gambar) }}"
-                                alt="" height="150"> </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>
-
 
     <footer>
 
