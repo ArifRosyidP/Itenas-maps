@@ -11,8 +11,9 @@ class konservercontroller extends Controller
     {
         return view('part/kontable', [
             "title" => "Tabel Kondisi Server",
-            "konservers" => Konserver::all()
+            // "konservers" => Konserver::all(),
             // "ssids" => Konserver::filter(request(['search']))->get(),
+            "konservers" => Konserver::filter(request(['search']))->get(),
         ]);
     }
 }

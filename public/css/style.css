@@ -451,4 +451,30 @@ a {
         background-color: #ff9900;
         border-color: #000000;
     }
+
+    /* saat ditable */
+
+    /* change searchbar size */
+
+    .container.kembali {
+        top: 0% !important;
+        /* z-index: 1; */
+        /* height: auto; */
+        width: 40vw;
+        /* background-color: red; */
+        /* left: 5%; */
+        font-size: 9vw;
+        right: 47%;
+    }
+
+    .table-wrap {
+        position: absolute;
+        top: 0%;
+        /* overflow-x: hidden; */
+        width: 100%;
+    }
+
+    .kon {
+        top: 5% !important;
+    }
 }

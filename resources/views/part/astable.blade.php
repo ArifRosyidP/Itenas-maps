@@ -26,16 +26,17 @@
     </script>
 
     <!-- Custom -->
-    <link rel="stylesheet" href={{ asset("css/style.css") }}>
-    <link rel="stylesheet" href={{ asset("css/stylenavbar.css") }}>
-    <link rel="stylesheet" href={{ asset("css/stylesidebar.css") }}>
-    <script src={{ asset("js/script.js") }}></script>
-    <script src={{ asset("js/scriptasetsearch.js") }}></script>
+    <link rel="stylesheet" href={{ asset('css/style.css') }}>
+    <link rel="stylesheet" href={{ asset('css/stylenavbar.css') }}>
+    <link rel="stylesheet" href={{ asset('css/stylesidebar.css') }}>
+    <script src={{ asset('js/script.js') }}></script>
+    <script src={{ asset('js/scriptasetsearch.js') }}></script>
 
     <!-- Icon title -->
     <link href="https://tik.itenas.ac.id/front/assets/img/logo-tik-favicon.png" rel="icon">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -52,44 +53,45 @@
         </div>
     </div>
 
-    <div class="titlet text-center my-3">
-        <h1>{{ $title }}</h1>
-    </div>
+    <div class="table-wrap">
+        <div class="titlet text-center my-3">
+            <h1>{{ $title }}</h1>
+        </div>
 
-    <div class="titlet text-center my-3">
-        <h3>{{ $namaged }}</h3>
-    </div>
+        <div class="titlet text-center my-3">
+            <h3>{{ $namaged }}</h3>
+        </div>
 
-    <!-- The Table -->
-    <div class="container" id="aset-list">
-        <table class="table table-responsive-sm table-hover text-center">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Nama Golongan</th>
-                    <th scope="col">Deskripsi</th>
-                    <th scope="col">Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                @php
-                    $num = 1;
-                @endphp
-                @foreach ($detailAset as $das)
+        <!-- The Table -->
+        <div class="container" id="aset-list">
+            <table class="table table-responsive-sm table-hover text-center">
+                <thead class="table-dark">
                     <tr>
-                        <th scope="row">{{ $num++ }}</th>
-                        <td>{{ $das['nama_golongan'] }}</td>
-                        <td>{{ $das["deskripsi"] }}</td>
-                        <td>{{ $das["total"] }}</td>
-                        {{-- <td>{{ $das->Gedung->name === '' ? '-' : $ssid->Gedung->name }}</td>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Golongan</th>
+                        <th scope="col">Deskripsi</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @php
+                        $num = 1;
+                    @endphp
+                    @foreach ($detailAset as $das)
+                        <tr>
+                            <th scope="row">{{ $num++ }}</th>
+                            <td>{{ $das['nama_golongan'] }}</td>
+                            <td>{{ $das['deskripsi'] }}</td>
+                            <td>{{ $das['total'] }}</td>
+                            {{-- <td>{{ $das->Gedung->name === '' ? '-' : $ssid->Gedung->name }}</td>
                         <td>{{ $das->Lantai->keterangan === '' ? '-' : $ssid->Lantai->keterangan }}</td>
                         <td>{{ $das->nama_ssid === '' ? '-' : $ssid->nama_ssid }}</td> --}}
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
-    
 </body>
 
 </html>

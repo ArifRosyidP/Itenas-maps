@@ -48,61 +48,61 @@
             </a>
         </div>
     </div>
+    <div class="table-wrap">
+        <div class="titlet text-center my-3">
+            <h1>{{ $title }}</h1>
+        </div>
 
-    <div class="titlet text-center my-3">
-        <h1>{{ $title }}</h1>
-    </div>
+        <div class="row justify-content-center mt-3 mb-3">
+            <div class="col-md-6">
+                <form action="/list-server">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search.." name="search"
+                            value="{{ request('search') }}">
+                        <button class="btn btn-dark" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-    <div class="row justify-content-center mt-3 mb-3">
-        <div class="col-md-6">
-            <form action="/jtable">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search.." name="search"
-                        value="{{ request('search') }}">
-                    <button class="btn btn-dark" type="submit">Search</button>
-                </div>
-            </form>
+        <!-- The Table -->
+        <div class="container">
+            <table class="table table-responsive-sm table-hover text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">vm-id</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Fungsi</th>
+                        <th scope="col">IP</th>
+                        <th scope="col">Ram (GB)</th>
+                        <th scope="col">VCPU</th>
+                        <th scope="col">HDD (GB)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @php
+                        $num = 1;
+                    @endphp
+                    @foreach ($listservers as $lserver)
+                        <tr>
+                            <th scope="row" class="align-middle">{{ $num++ }}</th>
+                            <td class="align-middle">{{ $lserver->vmid === '' ? '-' : $lserver->vmid }}</td>
+                            <td class="align-middle">{{ $lserver->nama === '' ? '-' : $lserver->nama }}</td>
+                            <td class="align-middle">{{ $lserver->fungsi === '' ? '-' : $lserver->fungsi }}</td>
+                            <td class="align-middle">{{ $lserver->ip === '' ? '-' : $lserver->ip }}</td>
+                            <td class="align-middle">{{ $lserver->ram === '' ? '-' : $lserver->ram }}</td>
+                            <td class="align-middle">{{ $lserver->vcpu === '' ? '-' : $lserver->vcpu }}</td>
+                            <td class="align-middle">{{ $lserver->hdd === '' ? '-' : $lserver->hdd }}</td>
+                            {{-- <td>{{ $konserver->gambar === '' ? '-' : $konserver->gambar }}</td> --}}
+                            {{-- <td class="align-middle"> <img src="{{ asset('img/img-server/' . $konserver->gambar) }}"
+                                alt="" height="150"> </td> --}}
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
-
-    <!-- The Table -->
-    <div class="container">
-        <table class="table table-responsive-sm table-hover text-center">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">vm-id</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Fungsi</th>
-                    <th scope="col">IP</th>
-                    <th scope="col">Ram (GB)</th>
-                    <th scope="col">VCPU</th>
-                    <th scope="col">HDD (GB)</th>
-                </tr>
-            </thead>
-            <tbody>
-                @php
-                    $num = 1;
-                @endphp
-                @foreach ($listservers as $lserver)
-                    <tr>
-                        <th scope="row" class="align-middle">{{ $num++ }}</th>
-                        <td class="align-middle">{{ $lserver->vmid === '' ? '-' : $lserver->vmid }}</td>
-                        <td class="align-middle">{{ $lserver->nama === '' ? '-' : $lserver->nama }}</td>
-                        <td class="align-middle">{{ $lserver->fungsi === '' ? '-' : $lserver->fungsi }}</td>
-                        <td class="align-middle">{{ $lserver->ip === '' ? '-' : $lserver->ip }}</td>
-                        <td class="align-middle">{{ $lserver->ram === '' ? '-' : $lserver->ram }}</td>
-                        <td class="align-middle">{{ $lserver->vcpu === '' ? '-' : $lserver->vcpu }}</td>
-                        <td class="align-middle">{{ $lserver->hdd === '' ? '-' : $lserver->hdd }}</td>
-                        {{-- <td>{{ $konserver->gambar === '' ? '-' : $konserver->gambar }}</td> --}}
-                        {{-- <td class="align-middle"> <img src="{{ asset('img/img-server/' . $konserver->gambar) }}"
-                                alt="" height="150"> </td> --}}
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>
-
 
     <footer>
 
