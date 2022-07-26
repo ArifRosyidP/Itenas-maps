@@ -90,13 +90,6 @@
             <table id="table_id" class="table display">
                 <thead class="table-dark">
                     <tr>
-<<<<<<< HEAD
-                        <th scope="row">{{ $num++ }}</th>
-                        <td>{{ $ssid->Gedung->name === '' ? '-' : $ssid->Gedung->name }}</td>
-                        <td>{{ $ssid->Lantai->keterangan === '' ? '-' : $ssid->Lantai->keterangan }}</td>
-                        <td>{{ $ssid->nama_ssid === '' ? '-' : $ssid->nama_ssid }}</td>
-                        <td>{{ $ssid->Status->nama_status === '' ? '-' : $ssid->Status->nama_status }}</td>
-=======
                         <th scope="col">No</th>
                         <th scope="col">Nama Gedung</th>
                         <!-- <th scope="col">Id Lantai</th>  -->
@@ -106,7 +99,6 @@
                         <th scope="col">Status</th>
                         <!-- <th scope="col">Speed Download</th> -->
                         <!-- <th scope="col">Speed Upload</th> -->
->>>>>>> origin
                     </tr>
                 </thead>
                 <tbody>
