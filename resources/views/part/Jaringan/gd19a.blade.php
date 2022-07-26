@@ -8,17 +8,18 @@
                     <div class="col info-item-wraping">
                         <i class="fa-solid fa-wifi logow "></i>
                         <!-- <p class="jaringantext"> - AP</p> -->
-                        <p class="jaringantext ">{{ ($jargd19a->ap === 0) ? "-" : ($jargd19a->ap) }} AP</p>
+                        <p class="jaringantext ">{{ $jargd19a->ap == 0 ? '-' : $jargd19a->ap }} AP</p>
                     </div>
                     <div class="col info-item-wraping">
                         <i class="fa-solid fa-download logow "></i>
                         <!-- <p class="jaringantext"> - Mbps</p> -->
-                        <p class="jaringantext">{{ ($jargd19a->download === 0.0) ? "-" : ($jargd19a->download) }} Mbps</p>
+                        <p class="jaringantext">{{ $jargd19a->download == 0.0 ? '-' : $jargd19a->download }} Mbps
+                        </p>
                     </div>
                     <div class="col info-item-wraping">
                         <i class="fa-solid fa-upload logow"></i>
                         <!-- <p class="jaringantext"> - Mbps</p> -->
-                        <p class="jaringantext">{{ ($jargd19a->upload === 0.0) ? "-" : ($jargd19a->upload) }} Mbps</p>
+                        <p class="jaringantext">{{ $jargd19a->upload == 0.0 ? '-' : $jargd19a->upload }} Mbps</p>
                     </div>
                 </div>
             </div>
