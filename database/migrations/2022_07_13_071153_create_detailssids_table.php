@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('gedung_id');
             $table->foreignId('lantai_id');
-            $table->foreignId('status_id');
+            $table->integer('jml');
             $table->string('nama_ssid');
+            $table->foreignId('status_id');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }
