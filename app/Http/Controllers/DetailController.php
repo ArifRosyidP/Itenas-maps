@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 class DetailController extends Controller
 {
     public function index()
-    {   
+    {
         return view('part/jtable', [
             "title" => "Detail Jaringan",
-            "ssids" => detailssid::filter(request(['search']))->paginate(10),
+            "ssids" => detailssid::filter(request(['search']))->get(),
         ]);
     }
 }
