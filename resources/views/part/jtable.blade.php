@@ -94,9 +94,11 @@
                         <th scope="col">Nama Gedung</th>
                         <!-- <th scope="col">Id Lantai</th>  -->
                         <th scope="col">Lantai</th>
-                        <!-- <th scope="col">Id SSID</th> -->
                         <th scope="col">Nama SSID</th>
+                        <th scope="col">Jumlah (Unit)</th>
+                        <!-- <th scope="col">Id SSID</th> -->
                         <th scope="col">Status</th>
+                        <th scope="col">Keterangan</th>
                         <!-- <th scope="col">Speed Download</th> -->
                         <!-- <th scope="col">Speed Upload</th> -->
                     </tr>
@@ -108,10 +110,12 @@
                     @foreach ($ssids as $ssid)
                         <tr>
                             <th scope="row">{{ $num++ }}</th>
-                            <td>{{ $ssid->Gedung->name === '' ? '-' : $ssid->Gedung->name }}</td>
-                            <td>{{ $ssid->lantai->keterangan === '' ? '-' : $ssid->lantai->keterangan }}</td>
-                            <td>{{ $ssid->nama_ssid === '' ? '-' : $ssid->nama_ssid }}</td>
-                            <td>{{ $ssid->Status->nama_status === '' ? '-' : $ssid->Status->nama_status }}</td>
+                            <td>{{ $ssid->Gedung->name == '' ? '-' : $ssid->Gedung->name }}</td>
+                            <td>{{ $ssid->lantai->nama_lantai == '' ? '-' : $ssid->lantai->nama_lantai }}</td>
+                            <td>{{ $ssid->nama_ssid == '' ? '-' : $ssid->nama_ssid }}</td>
+                            <td>{{ $ssid->jml == '' ? '-' : $ssid->jml }}</td>
+                            <td>{{ $ssid->Status->nama_status == '' ? '-' : $ssid->Status->nama_status }}</td>
+                            <td>{{ $ssid->keterangan == '' ? '-' : $ssid->keterangan }}</td>
                         </tr>
                     @endforeach
                 </tbody>
