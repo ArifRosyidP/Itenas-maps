@@ -53,7 +53,7 @@
 
             @if ($info === 'Jaringan')
                 <img src={{ asset('img/map-itenas-ed3-ja.jpg') }} class="mx-auto d-block imageMaps"
-                    alt="Koneksi / Server /  bermasalah cuk">
+                    alt="Image Problem">
                 <div class="container details">
                     <div class="row">
                         <div class="col">
@@ -112,7 +112,18 @@
                 @include('part.Jaringan.gd25')
             @elseif ($info === 'Aset')
                 <img src={{ asset('img/map-itenas-ed3-as.jpg') }} class="mx-auto d-block imageMaps"
-                    alt="Koneksi / Server /  bermasalah cuk">
+                    alt="Image Problem">
+                    <div class="container details">
+                        <div class="row">
+                            <div class="col">
+                                <div class="detail-aset">
+                                    <a href="https://aset.itenas.ac.id/" class="text-decoration-none">
+                                        <button type="button" class="btn btn-dark ">Detail Aset</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 @include('part.Aset.gd1')
                 @include('part.Aset.gd2')
                 @include('part.Aset.gd3')
