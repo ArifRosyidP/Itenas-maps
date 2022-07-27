@@ -89,7 +89,7 @@
                         <th scope="col">vm-id</th>
                         <th scope="col">Nama</th>
                         <th scope="col">Fungsi</th>
-                        <th scope="col">IP</th>
+                        {{-- <th scope="col">IP</th> --}}
                         <th scope="col">Ram (GB)</th>
                         <th scope="col">VCPU</th>
                         <th scope="col">HDD (GB)</th>
@@ -105,7 +105,7 @@
                             <td class="align-middle">{{ $lserver->vmid === '' ? '-' : $lserver->vmid }}</td>
                             <td class="align-middle">{{ $lserver->nama === '' ? '-' : $lserver->nama }}</td>
                             <td class="align-middle">{{ $lserver->fungsi === '' ? '-' : $lserver->fungsi }}</td>
-                            <td class="align-middle">{{ $lserver->ip === '' ? '-' : $lserver->ip }}</td>
+                            {{-- <td class="align-middle">{{ $lserver->ip === '' ? '-' : $lserver->ip }}</td> --}}
                             <td class="align-middle">{{ $lserver->ram === '' ? '-' : $lserver->ram }}</td>
                             <td class="align-middle">{{ $lserver->vcpu === '' ? '-' : $lserver->vcpu }}</td>
                             <td class="align-middle">{{ $lserver->hdd === '' ? '-' : $lserver->hdd }}</td>
