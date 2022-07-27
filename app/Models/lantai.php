@@ -12,8 +12,8 @@ class lantai extends Model
 
     protected $guarded = ['id'];
 
-    public function gedung()
-    { 
-        return $this->belongsTo(Gedung::class);
-    }
+    // public function gedung()
+    // {
+    //     return $this->belongsTo(Gedung::class);
+    // }
 }
