@@ -8,19 +8,22 @@
                     <div class="col info-item-wraping">
                         <i class="fa-solid fa-building logow "></i>
                         <!-- <p class="jaringantext"> - AP</p> -->
-                        <p class="jaringantext ">{{ ($asgd17 === 0) ? "-" : ($asgd17) }} Aset</p>
+                        <p class="jaringantext ">{{ $asgd17 === 0 ? '-' : $asgd17 }} Aset</p>
                     </div>
                 </div>
                 <div class="row btnaset">
                     <div class="container px-0 mx-auto">
                         @if ($asgd17 === 0)
-                        <a class="text-decoration-none">
-                            <button type="button" class="btn btn-dark" style="width: 150px; " disabled></i>Detail Aset</button>
-                        </a>
+                            <a class="text-decoration-none">
+                                <a class="text-decoration-none btn btn-dark disabled text-nowrap btn-detail-aset">
+                                    Detail Aset
+                                </a>
+                            </a>
                         @else
-                        <a href="/detailaset/Gedung 17/17" class="text-decoration-none">
-                            <button type="button" class="btn btn-go" style="width: 150px; "></i>Detail Aset</button>
-                        </a>
+                            <a href="/detailaset/Gedung 17/17"
+                                class="text-decoration-none btn btn-dark text-nowrap btn-detail-aset">
+                                Detail Aset
+                            </a>
                         @endif
                     </div>
                 </div>

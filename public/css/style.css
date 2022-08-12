@@ -200,6 +200,10 @@ body {
     border-color: #000000;
 }
 
+.btn-detail-aset {
+    width: 50%;
+}
+
 .editjalo {
     color: black;
 }
@@ -446,16 +450,23 @@ a {
         /* color: black;
     font-weight: 500;
     font-size: 1rem; */
+        /* width: 100% !important; */
         padding-bottom: 10px !important;
     }
 
     .btn-go {
-        width: 70px !important;
+        /* width: 10% !important; */
         font-weight: 500;
-        font-size: 0.5rem !important;
+        /* font-size: 0.5rem !important; */
         color: #212529;
         background-color: rgb(255, 255, 255);
         border-color: #000000;
+    }
+
+    .btn-detail-aset {
+        /* right: 10000% !important; */
+        width: 60% !important;
+        font-size: 0.5rem !important;
     }
 
     .btn-go:hover {
